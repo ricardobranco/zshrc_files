@@ -1,0 +1,78 @@
+#!/bin/zsh
+
+alias c='clear'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+alias la='ls -a'
+alias ll='ls -lh'
+alias lla='ls -lah'
+
+alias rr='rm -r'
+
+alias cpr='cp -r'
+alias ct="sudo rm -Rf ~/.Trash/*"
+
+
+
+if [ `uname` = "Darwin" ];
+then
+	alias ls="/bin/ls -FG";
+else
+	alias ls="/bin/ls -F --color";
+fi;
+
+
+
+# cdls
+#	Change directory and list it
+function cs {
+	if [ "$#" -eq "0" ];
+	then
+		cd "$HOME";
+	else
+		cd "$*";
+	fi
+	ls;
+}
+
+function duplica
+
+
+alias .="ls";
+alias ..="cd ..";
+
+alias lla="ls -la";
+
+#	mkcd
+#	Make a directory and change the working directory
+function mkcd {
+	mkdir "$1";
+	cd "$1";
+}
+
+# topen
+# Touch a file and open it with default app
+function topen {
+	touch $1;
+	subl $1;
+}
+
+#
+#if [ `uname` == "Darwin" ];
+#then
+#	CORES=`/usr/sbin/system_profiler SPHardwareDataType | grep "Cores" | #egrep -oe "[[:digit:]]+"`;
+#	alias make="make --no-print-directory -j $CORES";
+#else
+	alias make="make --no-print-directory";
+#fi;
+
+alias proxy="source \"${UNIXCONFDIR}/bash/proxy\""
+alias zshrc="subl ~/.zshrc"
+alias antlr4='java -jar /usr/local/lib/antlr-4.1-complete.jar'
+alias grun='java org.antlr.v4.runtime.misc.TestRig'
+alias antlrw='antlrw &'
+alias composer='/usr/local/bin/composer.phar'
+alias repo='cd ~/Documents/git'

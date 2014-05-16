@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+export PATH=$homebrew:$PATH
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="~/bin:$PATH"
+export CLASSPATH=".:/usr/local/lib/antlr-4.1-complete.jar:$CLASSPATH"
+export PATH="$PATH:/Applications/VMware Fusion.app/Contents/Library"
+export PATH=${PATH}:~/sdk/platform-tools:~/sdk/tools
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
